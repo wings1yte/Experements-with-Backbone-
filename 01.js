@@ -1,4 +1,4 @@
-/*console.log(Math.PI);
+console.log(Math.PI);
 console.log(Math.E);
 
 (function(){
@@ -27,7 +27,7 @@ function f() {
 window.onload = function () {
 var menushka = window.document.getElementById("header");
 menushka.style.backgroundColor="green";
-};*/
+};
 
 /*var m = [3,3,3,3,3,3,3];
 var s=0; 
