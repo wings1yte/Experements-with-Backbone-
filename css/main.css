@@ -1,4 +1,47 @@
-body {
-	background: #ccc
+#add-panel {
+	width: 60%;
+	margin: 80px auto;
+	box-shadow: 10px 10px 10px rgba(0,0,0,.3);
 }
 
+#add-from {
+	padding: 20px;
+}
+
+#LName, #FName {
+	padding: 7px;
+}
+
+#phone, #email {
+	padding: 7px;
+}
+
+#add {
+	margin: 10px 0;
+	float: right;
+}
+
+#tickets {
+	width: 60%;
+	margin: 0 auto;
+	float: inherit;
+}
+
+.ticket {
+	height: 220px;
+	box-shadow: 0 0 15px rgba(0,0,0,.2);
+}
+
+.personal-data{
+	height: 120px;
+}
+
+.editing {
+	display: block;
+	text-align: right;
+}
+
+.editer, .deleter {
+	display: inline-block;
+	padding: 0 5px
+}
