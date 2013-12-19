@@ -15,12 +15,16 @@
 <body>
 
 <script type="text/template" id="taskTemplate">
-        <div class="col-md-3"><div class="panel panel-default ticket"><div class="panel-heading"><p><%= FirstName%> <%= LastName%></p></div><div class="panel-body"><div class="personal-data"><small><span class="glyphicon glyphicon-earphone"></span><%= Phone%></small><br/><small><span class="glyphicon glyphicon-envelope"></span><%= email%></small></div><div class="editing"><a href="#"><span class="editer"><span class="glyphicon glyphicon-pencil"></span></span></a><a href="#"><span class="deleter"><span class="glyphicon glyphicon-trash"></span></span></a></div></div></div></div>
+        <div class="col-md-3"><div class="panel panel-default ticket"><div class="panel-heading"><p><%= FirstName%> <%= LastName%></p></div><div class="panel-body"><div class="personal-data"><small><span class="glyphicon glyphicon-earphone"></span><%= Phone%></small><br/><small><span class="glyphicon glyphicon-envelope"></span><%= email%></small></div><div class="editing"><span class="editer"><span class="glyphicon glyphicon-pencil"></span></span><span class="deleter"><span class="glyphicon glyphicon-trash"></span></span></div></div></div></div>
+</script>
+
+<script type="text/template" id="edit-taskTemplate">
+    <div class="col-md-3"><div class="panel panel-default ticket"><div class="panel-heading"><p><%= FirstName%> <%= LastName%></p></div><div class="panel-body"><div class="personal-data"><small><span class="glyphicon glyphicon-earphone"></span><%= Phone%></small><br/><small><span class="glyphicon glyphicon-envelope"></span><%= email%></small></div><div class="editing"><span class="ok"><span class="glyphicon glyphicon-ok"></span></span><span class="cancel"><span class="glyphicon glyphicon-remove"></span></span></div></div></div></div>
 </script>
 
 <div class="row">
         <div class="col-md-12">
-            <div id="add-panel" class="panel panel-primary">
+            <div id="addpanel" class="panel panel-primary">
                 <div class="panel-heading">Add a new user</div>
                 <div class="panel-body">
                     <form id="add-from" role="form">
@@ -28,31 +32,34 @@
                             <div class="col-md-6">
                                 <div id="LName" class="input-group col-xs-12"> 
                                     <span class="input-group-addon">Last Name</span>
-                                    <input type="text" class="form-control" placeholder="Last Name">
+                                    <input type="text" class="form-control" name="LName" placeholder="Last Name">
                                 </div>
                                 <div id="FName" class="input-group col-xs-12"> 
                                     <span class="input-group-addon">First Name</span>
-                                    <input type="text" class="form-control" placeholder="First Name">
+                                    <input type="text" class="form-control" name="FName" placeholder="First Name">
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div id="phone" class="input-group col-xs-12"> 
                                     <span class="input-group-addon "><span class="glyphicon glyphicon-earphone"></span></span>
-                                    <input type="text" class="form-control" placeholder="First Name">
+                                    <input type="text" class="form-control" name="Phone" placeholder="Phone Number">
                                 </div>
                                 <div id="email" class="input-group col-xs-12"> 
                                     <span class="input-group-addon"><span class="glyphicon glyphicon-envelope"></span></span>
-                                    <input type="text" class="form-control" placeholder="First Name">
+                                    <input type="text" class="form-control" name="email" placeholder="Email adress">
                                 </div>
                             </div>
-                             <div  class="col-md-12"><button id="add" type="button" class="btn btn-primary">Add</button></div>      
+                             <div  class="col-md-12">
+                                 <button id="cancel" type="reset" class="btn btn-primary">Cancel</button>
+                                 <button id="add" type="add" class="btn btn-primary">Add</button>  
+                             </div>     
                         </div>
                     </form>
                 </div>
             </div>
         </div>
         <div id="tickets" class="col-md-12">
-
+             
         </div>   
 </div>
 <script type="text/javascript" src="js/main.js"></script>    
